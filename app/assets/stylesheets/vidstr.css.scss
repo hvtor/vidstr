@@ -1,0 +1,64 @@
+
+.bg{
+  background-color: #444;
+}
+.video_container{
+  height: 500px;
+  width: 655px;
+  margin: 20px 20px 20px 20px;
+  padding: 5px 5px 5px 5px;
+  border: 2px solid #222;
+  border-radius: 4px;
+  background-color: #444;
+}
+
+.popover {
+  height: 2%;
+  width: 10%;
+  border: 1px;
+  border-radius: 1px;
+}
+
+.table {
+  margin: 3% 10% 10% 10%;
+  border-radius: 2px;
+}
+
+#notice {
+  margin: 2% 20% 20% 20%
+}
+
+.container{
+  margin: 0 auto auto 10%
+}
+
+.title {
+  font-size: 2em;
+  padding-left: 2%;
+}
+
+
+.tag_underlay{
+  height: 60px;
+  width: 640px;
+  padding: 18px 20px 20px 0px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  
+  background-color: #666;
+
+  margin: 2px 0px 0px 0px;
+
+  z-index:1;
+}
+
+
+.tag_playhead{
+  height: 60px;
+  width: 5px;
+  background-color: #c42427;
+  border-radius: 2px;
+  box-shadow: 1px 2px 7px #2c2c2c;
+  z-index: 1;
+  margin: -20px 0px 0px 90px;
+}
