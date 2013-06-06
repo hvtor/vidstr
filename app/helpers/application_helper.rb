@@ -18,6 +18,6 @@ def youtube_embed(youtube_url)
     youtube_id = $5
   end
 
-  %Q{<iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
+  # %Q{<iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
+  %Q{<iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/v/#{ youtube_id }&enablejsapi=1&playerapiid=ytplayer/" frameborder="0" allowfullscreen></iframe>}
 end
-

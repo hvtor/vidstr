@@ -11,18 +11,32 @@
     <div class="breadcrumbs"><%= link_to 'Back', videos_path %></div>
   </p>
 
-
-
-    <div class="video_container"> <%= raw(youtube_embed(@video.url))  %> 
-      <div class="tag_bar">
-        <div class="tag_underlay">
-          <div class="tag_playhead"></div>
-        </div>
+  <div class="video_container"> <%= raw(youtube_embed(@video.url))  %> 
+    <div class="tag_bar">
+      <div class="tag_underlay">
+        <div class="tag_playhead"></div>
       </div>
     </div>
-
-
+  </div>
   <div class="tags_container"  <%= @video.tags %> </div>
-  <script> </script>
+  <script>
+    $(document).ready(function)() {
+
+       var params = { allowScriptAccess: "always"};
+       var atts = { id: "myytplayer" }
+       swfobject.embedSWF("https://www.youtube.com/v/I8xZBfVsMzs&enablejsapi=1&playerapiid=ytplayer", "ytapiplayer", 
+        "640", "360", 
+        "8", 
+        null, 
+        null, 
+        params, 
+        atts);
+
+        function onYouTubePlayerReady(playerId) {
+          ytplayer 
+        }
+
+    }
+  </script>
   </div>
 </div>

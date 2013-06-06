@@ -5,7 +5,7 @@
   <% @videos.each do |video| %>
     <tr>
       <td class="title"><%= video.title %></td>
-      <td><%= youtube_video_thumb video.url %></td>
+      <td><%= raw(youtube_embed(video.url)) %></td>
       <td class="tags"><%= video.tags %></td>
 
       <td><%= link_to 'Show', video %></td>
