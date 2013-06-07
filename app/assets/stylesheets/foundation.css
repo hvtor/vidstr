@@ -3550,7 +3550,6 @@ form.custom {
 
 /* Breadcrumbs */
 .breadcrumbs {
-  display: block;
   padding: 0.5625em 0.875em 0.5625em;
   overflow: hidden;
   margin-left: 0;

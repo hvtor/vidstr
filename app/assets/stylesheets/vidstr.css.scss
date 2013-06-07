@@ -1,17 +1,25 @@
+$video_height: 720px;
+$video_width: 660px;
 
 .bg{
-  background-color: #888;
+  background-color: #f8f4f8;
 }
 .video_container{
-  height: 500px;
-  width: 655px;
-  margin: 20px 20px 20px 20px;
+  height: $video_height;
+  width: $video_width;
+  margin: 0px 20px 20px 20px;
   padding: 5px 5px 5px 5px;
-  border: 2px solid #222;
+  border: 4px solid #333;
   border-radius: 4px;
+  
   background-color: #fafafa;
+  float:left;
+  
 }
 
+.clearfix{
+  clear:both;
+}
 .popover {
   height: 2%;
   width: 10%;
@@ -25,40 +33,77 @@
 }
 
 #notice {
-  margin: 2% 20% 20% 20%
+  margin: 2% 20% 2% 20%
 }
 
 .container{
-  margin: 0 auto auto 10%
+  margin: -3% auto auto 10%
 }
 
 .title {
-  font-size: 2em;
+  font-size: 2.2em;
   padding-left: 2%;
+
 }
 
 
-.tag_underlay{
-  height: 60px;
+.tag_play_area{
+  height: $video_height/12;
   width: 640px;
-  padding: 18px 20px 20px 0px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  
-  background-color: #666;
+  background-color: #fafafa;
 
-  margin: 2px 0px 0px 0px;
+  margin: -4px 0px 0px 0px;
 
   z-index:1;
+  
+  -moz-box-shadow: inset 0 0 5px 5px #888;
+  -webkit-box-shadow: inset 0 0 5px 5px#888;
+  box-shadow: inset 0 0 5px 5px #888;
 }
-
 
 .tag_playhead{
   height: 60px;
-  width: 5px;
+  width: 6px;
   background-color: #c42427;
   border-radius: 2px;
-  box-shadow: 1px 2px 7px #2c2c2c;
+  
   z-index: 1;
-  margin: -18px 0px 0px 90px;
+  margin: 1px 0px 0px 90px;
+  border: 1px solid #444;
 }
+
+.tags_container {
+  height: $video_height*0.30;
+  width: $video_width*0.96;
+  background-color: #fafafa;
+  border: 2px solid #444;
+  margin: 20px 0 0 4px;
+  float: left;
+  border-radius: 4px;
+  position: relative;
+  
+}
+
+.form_popover{
+  height: 30px;
+  width: 4%;
+  background-color: #fafafa;
+
+}
+
+.page_container {
+  margin: 0
+}
+
+.iframe {
+  padding-right: 10px;
+  margin-right: 10px;
+
+}
+.f-dropdown {
+  border: 1px solid #fafafb
+}
+
+

@@ -1,42 +1,41 @@
-<div class="bg">
-  <div class="table">
-  <p>
-    <b class="title"><%= @video.title %><b>
-      <br>
-      <br>
-    <tbody class="showPage"> 
+    <div class="page_container">
+      <p>
+        <p class="title"><%= @video.title %></p>
+          
+        <tbody class="showPage"> 
 
-    </tbody>
+        </tbody>
 
-    <div class="breadcrumbs"><%= link_to 'Back', videos_path %></div>
-  </p>
+        <div class="breadcrumbs"><%= link_to 'Back', videos_path %></div>
+      </p>
 
-  <div class="video_container"> <%= raw(youtube_embed(@video.url))  %> 
-    <div class="tag_bar">
-      <div class="tag_underlay">
-        <div class="tag_playhead"></div>
+      <div class="video_container"><%= raw(youtube_embed(@video.url))  %>
+        <div class="tag_play_area">
+            <div class="tag_playhead"><div class="f-dropdown"></div></div>
+        </div>
+        <div class="tags_container" <%= @video.tags %> </div>
       </div>
-    </div>
-  </div>
-  <div class="tags_container"  <%= @video.tags %> </div>
-  <script>
-    $(document).ready(function)() {
 
-       var params = { allowScriptAccess: "always"};
-       var atts = { id: "myytplayer" }
-       swfobject.embedSWF("https://www.youtube.com/v/I8xZBfVsMzs&enablejsapi=1&playerapiid=ytplayer", "ytapiplayer", 
-        "640", "360", 
-        "8", 
-        null, 
-        null, 
-        params, 
-        atts);
+      <script>
+        $(document).ready(function)() {
 
-        function onYouTubePlayerReady(playerId) {
-          ytplayer 
+           var params = { allowScriptAccess: "always"};
+           var atts = { id: "myytplayer" }
+           swfobject.embedSWF("https://www.youtube.com/v/I8xZBfVsMzs&enablejsapi=1&playerapiid=ytplayer", "ytapiplayer", 
+            "640", "360", 
+            "8", 
+            null, 
+            null, 
+            params, 
+            atts);
+
+            function onYouTubePlayerReady(playerId) {
+              ytplayer 
+            }
+
         }
-
-    }
-  </script>
+      </script>
   </div>
-</div>
+  <br>
+  <br>
+  <footer></footer>
